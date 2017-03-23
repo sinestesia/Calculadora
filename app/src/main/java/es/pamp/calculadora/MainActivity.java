@@ -2,6 +2,8 @@ package es.pamp.calculadora;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String op = savedInstanceState.getString("operacion");
+
+
+
     }
 
    /* @Override
@@ -21,4 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
     }*/
+
+
+
+
+
+
 }
