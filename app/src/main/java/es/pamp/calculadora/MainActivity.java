@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 resultado= "";
                 resultado1= "";
+                operacion="";
                 resultadoTextView.setText(resultado);
             }
         });
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                         if (Integer.valueOf(resultado)==0){
                             resultadoTextView.setText("Error");//División por 0
                         }else{
-                            resultado=String.valueOf(Math.ceil(Integer.valueOf(resultado1)/Integer.valueOf(resultado)));
+                            resultado=String.valueOf((int) Math.ceil(Integer.valueOf(resultado1)/Integer.valueOf(resultado)));
                             resultadoTextView.setText(resultado);
                         };
                         break;
@@ -148,13 +149,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 resultado1=resultado;
-                resultado="";
+                /*resultado="";*/
             }
         });
         Button botonDiv = (Button) findViewById(R.id.botonDiv);
         botonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 resultado1 = resultado;
                 resultado="";
                 operacion= "div";

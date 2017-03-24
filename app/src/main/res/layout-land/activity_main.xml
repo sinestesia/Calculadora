@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     tools:context="es.pamp.calculadora.MainActivity"
     android:columnCount="5"
-    android:rowCount="5">
+    android:rowCount="5"
+    android:useDefaultMargins="true">
 
-    <Button
+<Button
         android:id="@+id/boton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

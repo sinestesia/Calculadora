@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="es.pamp.calculadora.MainActivity"
     android:columnCount="4"
-    android:rowCount="5">
+    android:rowCount="5"
+    android:useDefaultMargins="false"    >
 
     <Button
         android:id="@+id/boton7"
