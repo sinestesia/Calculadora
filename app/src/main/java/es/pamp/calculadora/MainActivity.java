@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (operacion) {
                     case "div":
                         if (Integer.valueOf(resultado)==0){
-                            resultadoTextView.setText("Error");
+                            resultadoTextView.setText("Error");//División por 0
                         }else{
                             resultado=String.valueOf(Math.ceil(Integer.valueOf(resultado1)/Integer.valueOf(resultado)));
                             resultadoTextView.setText(resultado);
