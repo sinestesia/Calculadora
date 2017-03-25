@@ -13,16 +13,21 @@ public class MainActivity extends AppCompatActivity {
     private String resultado1 = new String();
     private String operacion = new String();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final TextView resultadoTextView = (TextView)findViewById(R.id.resultado);
-        resultado = "";
-        resultado1 = "";
-        operacion ="";
 
-        //String op = savedInstanceState.getString("operacion");
+        if (savedInstanceState!=null){
+            resultado = savedInstanceState.getString("RESULTADO");
+            resultado1 = savedInstanceState.getString("RESULTADO1");
+            operacion = savedInstanceState.getString("OPERACION");
+
+            resultadoTextView.setText(resultado);
+        }
+
 
         Button boton0 = (Button) findViewById(R.id.boton0);
         boton0.setOnClickListener(new View.OnClickListener() {
@@ -149,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 resultado1=resultado;
-                /*resultado="";*/
+                operacion="";
             }
         });
         Button botonDiv = (Button) findViewById(R.id.botonDiv);
@@ -197,16 +202,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   /* @Override
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putString(valor);
         super.onSaveInstanceState(outState);
-
-    }*/
-
-
-
-
-
-
+        outState.putString("RESULTADO", resultado);
+        outState.putString("RESULTADO1", resultado1);
+        outState.putString("OPERACION", operacion);
+    }
 }
